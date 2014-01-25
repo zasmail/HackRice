@@ -2,7 +2,8 @@ package com.hackrice.betapp;
 
 
 
-import android.R;
+//import android.R;
+import com.hackrice.betapp.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.CompoundButton;
