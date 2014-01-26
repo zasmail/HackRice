@@ -11,5 +11,7 @@
     <string name="AnteButton">Ante</string>
     <string name="ExchangeButton">Exchange</string>
     <string name="SettingsButton">Settings</string>
+    
+    <color name="backgroundBlue">#2BA5C0</color>
 
 </resources>
