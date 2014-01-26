@@ -4,13 +4,17 @@ import java.sql.*;
 
 public class DBLink {
 	Connection myConn;
+	
+	/*
+	 * call DBLink class to set up connection with Google Cloud SQL instance
+	 */
 	public DBLink(String url) throws SQLException{
 		myConn = DriverManager.getConnection(url);
 	}
 	
 	public ArrayList<String> getUsersInWager(int wagerID) throws SQLException{
 		ArrayList<String>outList = new ArrayList<String>();
-		ResultSet rs = myConn.createStatement().executeQuery("SELECT userOne, userTwo WHERE wagerID=" + wagerID);
+		ResultSet rs = myConn.createStatement().executeQuery("SELECT userOne, userTwo FROM entries WHERE wagerID=" + wagerID);
 		while(rs.next()){
 			outList.add(rs.getString("userOne"));
 			outList.add(rs.getString("userTwo"));
@@ -23,8 +27,8 @@ public class DBLink {
 	 */
 	public int getWhichWagerWon(String user) throws SQLException{
 		int wagerID;
-		ResultSet rs = myConn.createStatement().executeQuery("SELECT wagerID WHERE whoWon=" + user + " UNION "
-				+ "SELECT wagerID WHERE whoWon="+ user);
+		ResultSet rs = myConn.createStatement().executeQuery("SELECT wagerID FROM entries WHERE whoWon=\'" + user + "\' UNION "
+				+ "SELECT wagerID WHERE whoWon=\'"+ user + "\'");
 		if(rs.next()){
 			wagerID = rs.getInt(1);
 			return wagerID;
@@ -56,5 +60,9 @@ public class DBLink {
 		return false;
 	}
 	
+	/*public boolean setWhoWon(int wagerID, String winner) throws SQLException{
+		ResultSet rs = myConn.createStatement().executeQuery("UPDATE entries SET whoWon=\'" + winner+"\' "
+				+ "WHERE wagerID="+wagerID);
+	}*/
 	
 }
