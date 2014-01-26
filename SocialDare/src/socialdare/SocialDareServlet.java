@@ -13,14 +13,14 @@ public class SocialDareServlet extends HttpServlet {
 					SystemProperty.Environment.Value.Production) {
 				// Load the class that provides the new "jdbc:google:mysql://" prefix.
 				Class.forName("com.mysql.jdbc.GoogleDriver");
-				url = "jdbc:google:mysql://serious-flight-471:db1/guestbook?user=root";
+				url = "jdbc:google:mysql://serious-flight-471:db1/socialdare?user=root";
 			} else {
 				// Local MySQL instance to use during development.
 				Class.forName("com.mysql.jdbc.Driver");
-				url = "jdbc:mysql://127.0.0.1:3306/guestbook?user=root";
+				url = "jdbc:mysql://127.0.0.1:3306/socialdare?user=root";
 
 				// Alternatively, connect to a Google Cloud SQL instance using:
-				// jdbc:mysql://ip-address-of-google-cloud-sql-instance:3306/guestbook?user=root
+				// jdbc:mysql://ip-address-of-google-cloud-sql-instance:3306/socialdare?user=root
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
