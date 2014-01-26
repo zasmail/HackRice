@@ -37,6 +37,16 @@ public class DBLinker {
 		return outList;
 	}
 	
-	
+	public ArrayList<Integer> getWagerIDsForUser(String name) throws SQLException{
+		ArrayList<Integer> outList = new ArrayList<Integer>();
+		ResultSet rs = myConn.createStatement().executeQuery(
+				"SELECT wagerID FROM entries WHERE userOne=\'" + name + "\' UNION "
+						+ "SELECT wagerID FROM entries WHERE userTwo =\'" + name + "\' "
+								+ "ORDER BY wagerName");
+		while(rs.next()){
+			outList.add(rs.getInt(1));
+		}
+		return outList;
+	}
 
 }

@@ -7,6 +7,7 @@ public class User {
 	
 	private String myName;
 	private ArrayList<String> myWagers;
+	private ArrayList<Integer> myWagerIDs;
 	
 	public User(){
 		this("");
@@ -20,5 +21,8 @@ public class User {
 		myWagers = link.getWagersForUser(myName);
 	}
 	
+	public void getMyWagerIDs(DBLinker link) throws SQLException{
+		myWagerIDs = link.getWagerIDsForUser(myName);
+	}
 	
 }
