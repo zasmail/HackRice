@@ -2,6 +2,7 @@
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:id="@+id/home"
         android:state_checked="true"
         android:drawable="@drawable/navbar_allselected"
     />

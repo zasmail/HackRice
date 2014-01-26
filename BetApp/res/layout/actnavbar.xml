@@ -38,17 +38,17 @@
             android:id="@+id/btnFile"
             style="@style/navbar_button"
             android:drawableTop="@drawable/navbar_fileselector"
-            android:text="Money"
+            android:text="Exchange"
             android:layout_marginLeft="5dp"
         />
-        <RadioButton
-            android:id="@+id/btnMore"
-            style="@style/navbar_button"
-            android:drawableTop="@drawable/navbar_moreselector"
-            android:text="Setting"
-            android:layout_marginLeft="5dp"
-            android:layout_alignParentBottom="true"
-        />
+
+         <RadioButton
+             android:id="@+id/btnMore"
+             style="@style/navbar_button"
+             android:layout_marginLeft="5dp"
+             android:drawableTop="@drawable/navbar_moreselector"
+             android:text="Setting" />
+
     </RadioGroup>
     
     

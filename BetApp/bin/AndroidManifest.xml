@@ -23,6 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:launchMode="singleTop" 
+            android:name="com.hackrice.betapp.People"
+            android:label="@string/title_activity_people" >
+        </activity>
     </application>
 
 </manifest>
