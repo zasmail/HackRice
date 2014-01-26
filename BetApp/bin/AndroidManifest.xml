@@ -24,22 +24,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:launchMode="singleTop" 
             android:name="com.hackrice.betapp.People"
             android:label="@string/PeopleButton" >
         </activity>
         <activity
-            android:launchMode="singleTop" 
             android:name="com.hackrice.betapp.Ante"
             android:label="@string/AnteButton" >
         </activity>
         <activity
-            android:launchMode="singleTop" 
             android:name="com.hackrice.betapp.Exchange"
             android:label="@string/ExchangeButton" >
         </activity>
         <activity
-            android:launchMode="singleTop" 
             android:name="com.hackrice.betapp.Settings"
             android:label="@string/SettingsButton" >
         </activity>
