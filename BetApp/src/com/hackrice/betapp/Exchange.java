@@ -13,12 +13,12 @@ import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-public class People  extends Activity {
+public class Exchange  extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.people_layout);
+        setContentView(R.layout.exchange_layout);
 
         RadioButton radioButton;
         radioButton = (RadioButton) findViewById(R.id.btnAll);
