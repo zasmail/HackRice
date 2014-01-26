@@ -21,27 +21,33 @@ if (SystemProperty.environment.value() ==
 
 Connection conn = DriverManager.getConnection(url);
 ResultSet rs = conn.createStatement().executeQuery(
-    "SELECT guestName, content, entryID FROM entries");
+    "SELECT username, userID, typeOfWager, reward, isJudge FROM entries");
 %>
 
 <table style="border: 1px solid black">
 <tbody>
 <tr>
 <th width="35%" style="background-color: #CCFFCC; margin: 5px">Name</th>
-<th style="background-color: #CCFFCC; margin: 5px">Message</th>
-<th style="background-color: #CCFFCC; margin: 5px">ID</th>
+<th style="background-color: #CCFFCC; margin: 5px">userID</th>
+<th style="background-color: #CCFFCC; margin: 5px">Type of Bet</th>
+<th style="background-color: #CCFFCC; margin: 5px">reward</th>
+<th style="background-color: #CCFFCC; margin: 5px">isJudge</th>
 </tr>
 
 <%
 while (rs.next()) {
-    String guestName = rs.getString("guestName");
-    String content = rs.getString("content");
-    int id = rs.getInt("entryID");
+    String username = rs.getString("username");
+    int userID = rs.getInt("userID");
+    String typeOfWager = rs.getString("typeOfWager");
+    String reward = rs.getString("reward");
+    boolean isJudge = rs.getBoolean("isJudge");
  %>
 <tr>
-<td><%= guestName %></td>
-<td><%= content %></td>
-<td><%= id %></td>
+<td><%= username %></td>
+<td><%= userID %></td>
+<td><%= typeOfWager %></td>
+<td><%= reward %></td>
+<td><%= isJudge %></td>
 </tr>
 <%
 }

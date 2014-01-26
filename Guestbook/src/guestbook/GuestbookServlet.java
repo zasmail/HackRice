@@ -38,10 +38,14 @@ public class GuestbookServlet extends HttpServlet {
               "<html><head></head><body>You are missing either a message or a name! Try again! " +
               "Redirecting in 3 seconds...</body></html>");
         } else {
-          String statement = "INSERT INTO entries (guestName, content) VALUES( ? , ? )";
+          String statement = "INSERT INTO entries (username, userID, typeOfWager, reward, isJudge) "
+          		+ "VALUES( ? , ? , ? , ? , ?)";
           PreparedStatement stmt = conn.prepareStatement(statement);
           stmt.setString(1, fname);
-          stmt.setString(2, content);
+          stmt.setInt(2, 42);
+          stmt.setString(3, "typeOfBet");
+          stmt.setString(4, "candy");
+          stmt.setBoolean(5, false);
           int success = 2;
           success = stmt.executeUpdate();
           if (success == 1) {
