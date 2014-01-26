@@ -33,41 +33,38 @@ public class People  extends Activity {
         radioButton.setOnCheckedChangeListener(btnNavBarOnCheckedChangeListener);
     }
 
+
     private CompoundButton.OnCheckedChangeListener btnNavBarOnCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
             if (isChecked) {
 
         		//Toast.makeText(NavBarActivity.this, "People", Toast.LENGTH_SHORT).show();            	
                	if(new String("Home").equals(buttonView.getText())){
-            		Intent intent = new Intent(getBaseContext(), NavBarActivity.class);
-                	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            		Intent intent = new Intent(getBaseContext(), Home.class);
             		startActivity(intent);
             	}
             	
             	if(new String("People").equals(buttonView.getText())){
             		Intent intent = new Intent(getBaseContext(), People.class);
-                	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             		startActivity(intent);
             	}
             	
             	if(new String("Ante").equals(buttonView.getText())){
             		Intent intent = new Intent(getBaseContext(), Ante.class);
-                	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             		startActivity(intent);
             	}
             	if(new String("Exchange").equals(buttonView.getText())){
             		Intent intent = new Intent(getBaseContext(), Exchange.class);
-                	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             		startActivity(intent);
             	}
             	if(new String("Settings").equals(buttonView.getText())){
             		Intent intent = new Intent(getBaseContext(), Settings.class);
-                	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             		startActivity(intent);
             	}  
             }
         }
     };
+
 
     
     

@@ -10,5 +10,10 @@
         <item name="android:layout_weight">1</item>
         <item name="android:textSize">12dp</item>
     </style>
+    
+    
+    <style name = "AppBaseTheme">
+        
+    </style>
 </resources>
 
