@@ -18,34 +18,34 @@
             android:id="@+id/btnAll"
             style="@style/navbar_button"
             android:drawableTop="@drawable/navbar_allselector"
-            android:text="All"
+            android:text="Home"
         />
         <RadioButton
             android:id="@+id/btnPicture"
             style="@style/navbar_button"
             android:drawableTop="@drawable/navbar_pictureselector"
-            android:text="Pictures"
+            android:text="Friends"
             android:layout_marginLeft="5dp"
         />
         <RadioButton
             android:id="@+id/btnVideo"
             style="@style/navbar_button"
             android:drawableTop="@drawable/navbar_videoselector"
-            android:text="Videos"
+            android:text="Bet"
             android:layout_marginLeft="5dp"
         />
          <RadioButton
             android:id="@+id/btnFile"
             style="@style/navbar_button"
             android:drawableTop="@drawable/navbar_fileselector"
-            android:text="Files"
+            android:text="Money"
             android:layout_marginLeft="5dp"
         />
         <RadioButton
             android:id="@+id/btnMore"
             style="@style/navbar_button"
             android:drawableTop="@drawable/navbar_moreselector"
-            android:text="More"
+            android:text="Setting"
             android:layout_marginLeft="5dp"
         />
     </RadioGroup>
@@ -71,7 +71,7 @@
             android:paddingBottom="15dp"
             android:text="Contacts"
             android:textColor="#ffffff"
-            android:textSize="16dp"
+            android:textSize="16sp"
         />
         <View
             android:layout_width="fill_parent"
@@ -86,7 +86,7 @@
             android:paddingBottom="15dp"
             android:text="Calendar"
             android:textColor="#ffffff"
-            android:textSize="16dp"
+            android:textSize="16sp"
         />
     </LinearLayout>
 </RelativeLayout>

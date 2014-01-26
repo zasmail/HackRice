@@ -33,7 +33,7 @@ public class NavBarActivity  extends Activity {
     private CompoundButton.OnCheckedChangeListener btnNavBarOnCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
             if (isChecked) {
-                Toast.makeText(NavBarActivity.this, buttonView.getText(), Toast.LENGTH_SHORT).show();
+               // Toast.makeText(NavBarActivity.this, buttonView.getText(), Toast.LENGTH_SHORT).show();
             }
         }
     };
