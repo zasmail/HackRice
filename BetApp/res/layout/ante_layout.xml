@@ -1,58 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/backgroundBlue"
-    tools:context=".NavBarActivity">
-    
-    
+    tools:context=".NavBarActivity" >
+
     <RadioGroup
         android:id="@+id/radiogroup"
         android:layout_width="fill_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
         android:background="@drawable/navbar_background"
-    >
+        android:orientation="horizontal" >
+
         <RadioButton
             android:id="@+id/btnAll"
             style="@style/navbar_button"
             android:drawableTop="@drawable/navbar_allselector"
-            android:text="@string/HomeButton"
-        />
+            android:text="@string/HomeButton" />
+
         <RadioButton
             android:id="@+id/btnPicture"
             style="@style/navbar_button"
-            android:drawableTop="@drawable/navbar_pictureselector"
-            android:text="@string/PeopleButton"
             android:layout_marginLeft="5dp"
-        />
+            android:drawableTop="@drawable/navbar_pictureselector"
+            android:text="@string/PeopleButton" />
+
         <RadioButton
             android:id="@+id/btnVideo"
             style="@style/navbar_button"
-            android:drawableTop="@drawable/navbar_videoselector"
-            android:text="@string/AnteButton"
             android:layout_marginLeft="5dp"
-        />
-         <RadioButton
+            android:drawableTop="@drawable/navbar_videoselector"
+            android:text="@string/AnteButton" />
+
+        <RadioButton
             android:id="@+id/btnFile"
             style="@style/navbar_button"
-            android:drawableTop="@drawable/navbar_fileselector"
-            android:text="@string/ExchangeButton"
             android:layout_marginLeft="5dp"
-        />
+            android:drawableTop="@drawable/navbar_fileselector"
+            android:text="@string/ExchangeButton" />
 
-         <RadioButton
-             android:id="@+id/btnMore"
-             style="@style/navbar_button"
-             android:drawableTop="@drawable/navbar_moreselector"
-             android:text="@string/SettingsButton" 
-             android:layout_marginLeft="5dp"/>
-
+        <RadioButton
+            android:id="@+id/btnMore"
+            style="@style/navbar_button"
+            android:layout_marginLeft="5dp"
+            android:drawableTop="@drawable/navbar_moreselector"
+            android:text="@string/SettingsButton" />
     </RadioGroup>
+	
+    
     
     
     <LinearLayout
@@ -60,37 +57,94 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-4dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/laysemitransparentwithborders"
         android:orientation="vertical"
-        android:layout_marginBottom="-4dp"
-        android:visibility="gone"
-    >
+        android:visibility="gone" >
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
             android:paddingLeft="5dp"
             android:paddingTop="15dp"
-            android:paddingBottom="15dp"
             android:text="Contacts"
             android:textColor="#ffffff"
-            android:textSize="16dp"
-        />
+            android:textSize="16dp" />
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
-            android:background="#ff999999"
-        />
+            android:background="#ff999999" />
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
             android:paddingLeft="5dp"
             android:paddingTop="15dp"
-            android:paddingBottom="15dp"
             android:text="Calendar"
             android:textColor="#ffffff"
-            android:textSize="16dp"
-        />
+            android:textSize="16dp" />
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPersonName" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="30dp"
+        android:text="Opponent"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView3"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_below="@+id/editText2"
+        android:text="What's on the line?"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_below="@+id/editText1"
+        android:text="Name of Ante"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
 </RelativeLayout>
