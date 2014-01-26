@@ -6,7 +6,7 @@ package com.hackrice.betapp;
 
 import com.hackrice.betapp.R;
 
-import android.app.Activity;
+import android.app.Activity; 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.CompoundButton;
@@ -36,36 +36,39 @@ public class NavBarActivity  extends Activity {
     private CompoundButton.OnCheckedChangeListener btnNavBarOnCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
             if (isChecked) {
-            	
-            	if(new String("People").equals(buttonView.getText())){
-            		Toast.makeText(NavBarActivity.this, "People", Toast.LENGTH_SHORT).show();
-            		
-            		change();
-            		//startActivity(new Intent(this, People.class));
-            		
+
+        		//Toast.makeText(NavBarActivity.this, "People", Toast.LENGTH_SHORT).show();            	
+               	if(new String("Home").equals(buttonView.getText())){
+            		Intent intent = new Intent(getBaseContext(), NavBarActivity.class);
+                	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            		startActivity(intent);
             	}
             	
-               
-            	//Intent intent = new Intent(NavBarActivity.this, People.class);
-	    	    //NavBarActivity.this.startActivity(intent);
-            	/*
-            	if ( a == "People"){
-            		//Toast.makeText(NavBarActivity.this, "awesome", Toast.LENGTH_SHORT).show();
-            		Toast.makeText(NavBarActivity.this, buttonView.getText(), Toast.LENGTH_SHORT).show();
-                	*/
-            		
-            	//}
+            	if(new String("People").equals(buttonView.getText())){
+            		Intent intent = new Intent(getBaseContext(), People.class);
+                	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            		startActivity(intent);
+            	}
+            	
+            	if(new String("Ante").equals(buttonView.getText())){
+            		Intent intent = new Intent(getBaseContext(), Ante.class);
+                	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            		startActivity(intent);
+            	}
+            	if(new String("Exchange").equals(buttonView.getText())){
+            		Intent intent = new Intent(getBaseContext(), Exchange.class);
+                	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            		startActivity(intent);
+            	}
+            	if(new String("Settings").equals(buttonView.getText())){
+            		Intent intent = new Intent(getBaseContext(), Settings.class);
+                	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            		startActivity(intent);
+            	}  
             }
         }
     };
-    
-    public void change() 
-    {
-    	Intent intent = new Intent(getBaseContext(), People.class);
-    	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-		startActivity(intent);
-    	
-    }
+
     
     
     

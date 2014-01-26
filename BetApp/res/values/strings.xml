@@ -5,6 +5,11 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     
-    <string name="title_activity_people">People</string>
+    <string name="NavBar">NavBarActivity</string>
+    <string name= "HomeButton">Home</string>
+    <string name="PeopleButton">People</string>
+    <string name="AnteButton">Ante</string>
+    <string name="ExchangeButton">Exchange</string>
+    <string name="SettingsButton">Settings</string>
 
 </resources>
